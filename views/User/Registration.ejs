@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="/js/jquery-3.5.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+    <script src="/js/validator.js"></script>
+<style>
+  
+.error{
+    color:red
+}
+.required{
+    color:red
+}
+input, select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=radio] {
+  width: 10%;
+}
+
+input[type=submit] {
+  background-color: #45a049;
+  width: 25%;
+  
+}
+body{
+  background-color:#f2f2f2 ;
+}
+
+div {
+  border-radius: 5px;
+  background-color:#f2f2f2 ;
+  padding: 20px;
+} 
+ .required {
+        color: red;
+          }
+.one{
+  background-color: white;
+  border: 2px solid white;
+  padding: 50px;
+  margin-top: 25px;
+  margin-bottom: 100px;
+  margin-left: 600px;
+  margin-right: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+</style>
+</head>
+<body>
+    <h1 style="text-align: center; background-color:#f2f2f2 ;">Registration</h1>
+
+<div> 
+  <form action="/user/add" method="POST" id="form" class="one">
+    <label for="name"><strong>Name</strong><span   class="required">*</span></label><br>
+    <input type="text" id="name" name="name"  placeholder="Name"/>
+<br>
+    <label for="body"><strong>Email</strong><span   class="required">*</span></label><br>
+    <input type="text" id="body" name="email"  placeholder="Email"/>
+    <br>
+
+    <label for="dob"><strong>Date of Birth</strong><span   class="required">*</span></label>
+    <input type="date" id="date" name="dob"></input>
+    <br>
+
+    <label for="age"><strong>Age</strong><span class="required">*</span></label><br>
+    <input type="number" id="age"  placeholder="Ex 23" min="18" name = "age"></input>
+    <br><br><br>
+    
+    <div class="gender">
+    <label for="dob"><strong>Gender</strong><span   class="required">*</span></label><br>
+    <input type="radio"  value="male" name="gender">
+    <label for="male">Male</label>
+    <input type="radio"  value="female" name="gender">
+    <label for="female">Female</label>
+    <input type="radio"  value="other" name="gender">
+    <label for="other">Other</label>
+    </div>
+   
+    <br>
+
+    
+    <label for="ddlcountry"><strong>Country</strong><span class="required">*</span></label><br>
+    <div class="dd">
+    <select  id="ddlcountry" name="country" >
+      <option value="">Select---Country</option>
+    </select></div> 
+    
+   <center> <input type="submit" value="Submit"></center>
+  </form>
+</div>
+
+</body>
+</html>
